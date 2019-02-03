@@ -1,6 +1,3 @@
-<!--Your survey should have 10 questions of your choosing. 
-Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -154,7 +151,8 @@ Each answer should be on a scale of 1 to 5 based on how much the user agrees or 
                                         <option>5 (Strongly Agree)</option>
                                     </select>
                                 </div>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                                    id="submitBtn">
                                     Submit
                                 </button>
                                 <!-- Modal -->
@@ -186,7 +184,7 @@ Each answer should be on a scale of 1 to 5 based on how much the user agrees or 
 
             <footer class="footer">
                 <div class="container">
-                    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/LauraShortridge/friendfinder.git">GitHub
+                    <p><a href="/api/friends/">API Friends List</a> | <a href="https://github.com/LauraShortridge/friendfinder.git">GitHub
                             Repo</a>
                 </div>
             </footer>
@@ -204,24 +202,42 @@ Each answer should be on a scale of 1 to 5 based on how much the user agrees or 
     // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
     // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
 
-    $(".submit").on("click", function (event) {
+    // var fs = require("fs");
+
+    $("#submitBtn").on("click", function (event) {
         event.preventDefault();
 
-        // Here we grab the form elements
+    // Here we grab the form elements
         var newFriend = {
             name: $("#name").val().trim(),
-            picture: $("picture").val().trim(),
-            question1: $("#question1").val().trim(),
-            question2: $("#question2").val().trim(),
-            question3: $("#question3").val().trim(),
-            question4: $("#question4").val().trim(),
-            question5: $("#question5").val().trim(),
-            question6: $("#question6").val().trim(),
-            question7: $("#question7").val().trim(),
-            question8: $("#question8").val().trim(),
-            question9: $("#question9").val().trim(),
-            question10: $("#question10").val().trim()
+            picture: $("#picture").val().trim(),
+            scores: [
+                $("#question1").val().trim(),
+                $("#question2").val().trim(),
+                $("#question3").val().trim(),
+                $("#question4").val().trim(),
+                $("#question5").val().trim(),
+                $("#question6").val().trim(),
+                $("#question7").val().trim(),
+                $("#question8").val().trim(),
+                $("#question9").val().trim(),
+                $("#question10").val().trim()
+            ]
         };
+        // fs.appendFile("friends.js", function (err) {
+
+        //     // If an error was experienced we will log it.
+        //     if (err) {
+        //         console.log(err);
+        //     }
+
+        //     // If no error is experienced, we'll log the phrase "Content Added" to our node console.
+        //     else {
+        //         friendArray.push(newFriend);
+        //         console.log("Content Added!");
+        //     }
+
+        // });
 
         console.log(newFriend);
 
@@ -230,16 +246,13 @@ Each answer should be on a scale of 1 to 5 based on how much the user agrees or 
         // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
         // depending on if a tables is available or not.
 
-        $.post("/api/friends", newFriend,
-            function (data) {
-
-                // // Clear the form when submitting
-                // $("#reserve-name").val("");
-                // $("#reserve-phone").val("");
-                // $("#reserve-email").val("");
-                // $("#reserve-unique-id").val("");
-
-            });
+        // $.post("/api/friends/", newFriend)
+        // .then(function(data) {
+        //     //Handle a successful response from the api
+        // })
+        // .catch(function(error) {
+        //     //handle a failure from the api
+        // })
 
     });
 
