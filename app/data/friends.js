@@ -3,7 +3,7 @@
 var friendArray = [
     {
         "name": "Laura",
-        "picture": "https://drive.google.com/file/d/1bTFxagnK1Raeb5atn_a_BZDioBX1HUxD/view?usp=sharing",
+        "picture": "https://avatars3.githubusercontent.com/u/43973664?s=400&u=ea3853330fba650672266dc28eccce2b4a0f50e9&v=4",
         "scores": [
             1,
             1,
@@ -37,13 +37,3 @@ var friendArray = [
 ];
 
 module.exports = friendArray;
-
-// var totalDifference = "";
-
-// for (i = 0; i < friendArray.length; i ++) {
-//     // console.log(friendArray[i].scores, "First");
-
-//     for (j = 0; j < friendArray[i].scores.length; j ++) {
-//         console.log(friendArray[i].scores[j], "Second");
-//     }
-// }

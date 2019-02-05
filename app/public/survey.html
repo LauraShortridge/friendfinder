@@ -167,7 +167,7 @@
                                             </div>
                                             <div class="modal-body">
                                                 <h4 id="bestMatchName"></h4>
-                                                <img id="bestMatchPic" src="", alt="Match Pic">
+                                                <img class="img-fluid" id="bestMatchPic" src="", alt="Match Pic">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
@@ -231,13 +231,11 @@
         // depending on if a tables is available or not.
 
         $.post("/api/friends/", newFriend, function(data) {
-        $("#bestMatchName").html(data.MatchName);
-        $("#bestMatchPic").attr("src", data.MatchPic);
+        $("#bestMatchName").html(data.name);
+        $("#bestMatchPic").attr("src", data.picture);
         $("#exampleModal").modal("toggle");
         console.log("It's working")
         });
-        $("#exampleModal").modal("toggle");
-        
 
     });
  

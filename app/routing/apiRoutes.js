@@ -55,6 +55,8 @@ module.exports = function(app) {
     }
     friendData.push(req.body);
 
+    res.json({"name": matchName, "picture": matchPic});
+
 
 
     });
