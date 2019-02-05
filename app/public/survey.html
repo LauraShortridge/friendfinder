@@ -45,7 +45,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            Questions
+                            Questions (1 = Strongly Disagree and 5 = Strongly Agree)
                         </div>
                         <div class="card-body">
                             <form role="form">
@@ -53,106 +53,105 @@
                                     <label for="question1">You feel energized when you are with a large group of
                                         people.</label>
                                     <select class="form-control" id="question1">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question2">Being right is more important than the feelings of others.</label>
                                     <select class="form-control" id="question2">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question3">Vacation is a time to have fun and see new things. You can
                                         relax at home.</label>
                                     <select class="form-control" id="question3">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question4">Pets should be considered part of the family.</label>
                                     <select class="form-control" id="question4">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question5">Health and fitness are very important to me.</label>
                                     <select class="form-control" id="question5">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question6">Kindess and respect should rule how we treat others.</label>
                                     <select class="form-control" id="question6">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question7">A relaxing night in is better than a crazy night out.</label>
                                     <select class="form-control" id="question7">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question8">Budgeting and meeting financial goals is important to me.</label>
                                     <select class="form-control" id="question8">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question9">It is better to be kind than funny.</label>
                                     <select class="form-control" id="question9">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="question10">People who laugh together stay together.</label>
                                     <select class="form-control" id="question10">
-                                        <option>1 (Strongly Disagree)</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
+                                        <option>5</option>
                                     </select>
                                 </div>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                                    id="submitBtn">
+                                <button type="button" class="btn btn-primary" id="submitBtn">
                                     Submit
                                 </button>
                                 <!-- Modal -->
@@ -161,13 +160,14 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Your Best Match</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                ...
+                                                <h4 id="bestMatchName"></h4>
+                                                <img id="bestMatchPic" src="", alt="Match Pic">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
@@ -202,8 +202,6 @@
     // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
     // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
 
-    // var fs = require("fs");
-
     $("#submitBtn").on("click", function (event) {
         event.preventDefault();
 
@@ -224,21 +222,7 @@
                 $("#question10").val().trim()
             ]
         };
-        // fs.appendFile("friends.js", function (err) {
-
-        //     // If an error was experienced we will log it.
-        //     if (err) {
-        //         console.log(err);
-        //     }
-
-        //     // If no error is experienced, we'll log the phrase "Content Added" to our node console.
-        //     else {
-        //         friendArray.push(newFriend);
-        //         console.log("Content Added!");
-        //     }
-
-        // });
-
+      
         console.log(newFriend);
 
         // This line is the magic. It's very similar to the standard ajax function we used.
@@ -246,14 +230,15 @@
         // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
         // depending on if a tables is available or not.
 
-        // $.post("/api/friends/", newFriend)
-        // .then(function(data) {
-        //     //Handle a successful response from the api
-        // })
-        // .catch(function(error) {
-        //     //handle a failure from the api
-        // })
+        $.post("/api/friends/", newFriend, function(data) {
+        $("#bestMatchName").html(data.MatchName);
+        $("#bestMatchPic").attr("src", data.MatchPic);
+        $("#exampleModal").modal("toggle");
+        console.log("It's working")
+        });
+        $("#exampleModal").modal("toggle");
+        
 
     });
-
+ 
 </script>

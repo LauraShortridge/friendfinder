@@ -34,13 +34,29 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends", function(req, res) {
-    if (friendData.length < 5) {
-      friendData.push(req.body);
-      res.json(true);
+    var userAnswers = req.body.scores
+    console.log(userAnswers);
+    var matchName = "";
+    var matchPic = "";
+    var totalDiff = 10000;
+
+    for (i = 0; i < friendData.length; i ++) {
+      var diff = 0;
+      for (var j = 0; j < userAnswers.length; j ++) {
+        diff += Math.abs(friendData[i].scores[j] - userAnswers[j]);
+      }
+      console.log("diff = ", diff);
+      if (diff < totalDiff) {
+        totalDiff = diff;
+        matchName = friendData[i].name;
+        matchPic = friendData[i].picture;
+        console.log(matchName, matchPic);
+      }
     }
-    else {
-      alert("It wasn't added");
-    }
+    friendData.push(req.body);
+
+
+
     });
 
 
