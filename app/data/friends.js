@@ -18,8 +18,8 @@ var friendArray = [
         ]
     },
     {
-        "name": "Daryl",
-        "picture": "https://media.comicbook.com/2018/05/the-walking-dead-daryl-dixon-norman-reedus-huge-paycheck-1112642-1280x0.jpeg",
+        "name": "Diane",
+        "picture": "https://cdn.pixabay.com/photo/2014/04/26/04/25/fitness-332278__340.jpg",
         "scores": [
             3,
             3,
@@ -32,7 +32,24 @@ var friendArray = [
             5,
             4
         ]
+    },
+    {
+        "name": "Daniel",
+        "picture": "https://cdn.pixabay.com/photo/2014/07/31/23/49/guitarist-407212__340.jpg",
+        "scores": [
+            4,
+            2,
+            3,
+            5,
+            4,
+            1,
+            3,
+            3,
+            3,
+            4
+        ]
     }
+
 
 ];
 
