@@ -1,5 +1,3 @@
-//You should save your application's data as an array of objects. Each of these objects should roughly follow the format below.
-
 var friendArray = [
     {
         "name": "Laura",
@@ -49,8 +47,6 @@ var friendArray = [
             4
         ]
     }
-
-
 ];
 
 module.exports = friendArray;
